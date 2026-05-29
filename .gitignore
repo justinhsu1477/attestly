@@ -62,11 +62,22 @@ desktop.ini
 
 # ── Env / secrets ──────────────────────────────────────────
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+!.env.sample
 *.pem
 *.key
+*.p12
+*.keystore
 secrets/
+
+# ── Local data (demo SQLite stores — may hold user memories) ──
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
 
 # ── Logs ───────────────────────────────────────────────────
 *.log
